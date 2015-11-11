@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/idillia/bridgetable/issues"
   },
-  "homepage": "https://github.com/idillia/bridgetable#readme"
+  "homepage": "https://github.com/idillia/bridgetable#readme",
+  "dependencies": {
+    "connect": "^3.4.0",
+    "serve-static": "^1.10.0"
+  }
 }
