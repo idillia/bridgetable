@@ -134,7 +134,7 @@ angular.module('ngCardDemo').controller('DemoCtrl', function($scope, $http) {
     $scope.players = {};
     var deck = [];
 
-    var directions = ['W','N', 'E', 'S'];
+    var directions = ['W', 'N', 'E', 'S'];
 
 
     reset();
@@ -143,13 +143,22 @@ angular.module('ngCardDemo').controller('DemoCtrl', function($scope, $http) {
     // deal and sort cards for given player
     function deal(player) {
         for (var i = 0; i < 13; i++) {
-            var card = deck.shift()
+            var card = deck.shift() // popping from an array is more efficient than shifting
             player.push(card);
         }
         // console.log("player", player);
+
+        // Assign a value to each suit. Add that value to the rank. Then sort from
+        // those final values. It might be a slightly hacky solution but works for now.
         player.sort(function(a,b) {
-            var rankOrder1 = ranks.indexOf(a.rank);
-            var rankOrder2 = ranks.indexOf(b.rank);
+            var suitValues = {
+                'S': 400,
+                'H': 300,
+                'D': 200,
+                'C': 100
+            }
+            var rankOrder1 = ranks.indexOf(a.rank) + suitValues[a.suit];
+            var rankOrder2 = ranks.indexOf(b.rank) + suitValues[b.suit];
             // console.log("ra1: ", rankOrder1, "ra2 :", rankOrder1)
             return rankOrder2 - rankOrder1;
 
