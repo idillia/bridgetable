@@ -103,7 +103,9 @@ playingCards.directive('playingCard', function($compile, $sce) {
         scope: {},
         restrict: 'E',
         link: function(scope, element, attrs) {
-            scope.zindex = scope.$parent.$index
+            // console.log(scope);
+            
+            scope.zindex = scope.$parent.$index;
             scope.rank = ranks[attrs.rank] || ranks.back;
             scope.suit = suits[attrs.suit] || suits.heart;
             element.replaceWith($compile(scope.rank.template)(scope));
@@ -144,10 +146,11 @@ angular.module('ngCardDemo').controller('DemoCtrl', function($scope, $http) {
             var card = deck.shift()
             player.push(card);
         }
-
+        // console.log("player", player);
         player.sort(function(a,b) {
             var rankOrder1 = ranks.indexOf(a.rank);
             var rankOrder2 = ranks.indexOf(b.rank);
+            // console.log("ra1: ", rankOrder1, "ra2 :", rankOrder1)
             return rankOrder2 - rankOrder1;
 
         });
@@ -179,6 +182,10 @@ angular.module('ngCardDemo').controller('DemoCtrl', function($scope, $http) {
 
     function initGame() {
         console.log("deal is called");
+        console.log("$scope.players.E: ", $scope.players.E);
+        console.log(deal);
+        console.log(shuffleDeck);
+        console.log(deck);
 
         shuffleDeck(deck);
         deal($scope.players.E);
@@ -237,7 +244,7 @@ angular.module('ngCardDemo').controller('DemoCtrl', function($scope, $http) {
 
 
     $scope.cardSelect = function(card) {
-
+        // console.log("directions: ", directions);
         for (var d = 0; d < directions.length; d++) {
             var hand = $scope.players[directions[d]]
             var index = -1;

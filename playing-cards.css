@@ -15,8 +15,8 @@
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     float: left;
-    width: 16em;
-    height: 22.4em;
+    width: 8em;
+    height: 11.2em;
     margin: 0 1.2em 1.2em 0;
     position: relative;
     z-index: 2;
@@ -44,13 +44,13 @@
 }
 .playing-card .corner span {
     display: block;
-    font-size: 1.5em;
+    font-size: 0.75em;
     font-weight: bold;
 }
 .playing-card .corner .number {
-    font-size: 2em;
-    height: 1.32em;
-    line-height: 1.32em;
+    font-size: 1em;
+    height: 0.66em;
+    line-height: 0.66em;
 }
 .playing-card .corner.top {
     left: 0.64em;
@@ -65,7 +65,7 @@
     transform: rotate(180deg);
 }
 .playing-card .card-ace span.suit.middle_center {
-    font-size: 10.24em;
+    font-size: 5.12em;
     left: 0.45517241379310347em;
     top: 0.593103448275862em;
 }
@@ -74,10 +74,10 @@
 }
 .playing-card .face {
     position: absolute;
-    left: 2.56em;
-    top: 2.08em;
-    width: 10.8em;
-    height: 18.24em;
+    left: 1.28em;
+    top: 1.04em;
+    width: 5.4em;
+    height: 9.12em;
 }
 
 .card-back .face {
@@ -110,7 +110,7 @@
 .card-jack .face,
 .card-queen .face,
 .card-king .face {
-    background-size: 10.8em 18.24em !important;
+    background-size: 5.4em 9.12em !important;
 }
 
 
@@ -162,7 +162,7 @@
 }
 
 .playing-card .suit {
-    font-size: 5.8em;
+    font-size: 2.9em;
     font-weight: normal;
     width: 0.6896551724137931em;
     height: 0.786206896551724em;
