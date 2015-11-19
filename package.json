@@ -1,0 +1,27 @@
+{
+  "name": "bridge",
+  "version": "0.0.1",
+  "description": "Bridge repo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idillia/bridgetable.git"
+  },
+  "keywords": [
+    "bridge"
+  ],
+  "author": "Mila Antonova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/idillia/bridgetable/issues"
+  },
+  "homepage": "https://github.com/idillia/bridgetable#readme",
+  "dependencies": {
+    "connect": "^3.4.0",
+    "serve-static": "^1.10.0"
+  }
+}
