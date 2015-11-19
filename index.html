@@ -30,53 +30,26 @@
 
       <div class="row">
         <div class="col-lg-4">
-          <span ng-click="cardSelect(card)" ng-repeat="card in players.W | filter:{suit:'S'} ">
-            <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-          </span>
-          <span ng-click="cardSelect(card)" ng-repeat="card in players.W | filter:{suit:'H'} ">
-            <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-          </span>
-          <span ng-click="cardSelect(card)" ng-repeat="card in players.W | filter:{suit:'C'}">
-            <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-          </span>
-          <span ng-click="cardSelect(card)" ng-repeat="card in players.W | filter:{suit:'D'}">
+         <span ng-click="cardSelect(card)" ng-repeat="card in players.W">
             <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
           </span>
         </div>
-        <div class="col-lg-4">X</div>
+        <div class="col-lg-4"></div>
         <div class="col-lg-4">
-          <span ng-click="cardSelect(card)" ng-repeat="card in players.E  | filter:{suit:'S'}">
-            <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-          </span>
-          <span ng-click="cardSelect(card)" ng-repeat="card in players.E | filter:{suit:'H'} ">
-            <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-          </span>
-          <span ng-click="cardSelect(card)" ng-repeat="card in players.E | filter:{suit:'C'} ">
-            <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-          </span>
-          <span ng-click="cardSelect(card)" ng-repeat="card in players.E | filter:{suit:'D'} ">
+       <span ng-click="cardSelect(card)" ng-repeat="card in players.E">
             <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
           </span>
         </div>
       </div> 
 
     <div id="south" class="row">
-      <div class="col-lg-4">X</div>
+      <div class="col-lg-4"></div>
       <div class="cole-lg-4">
-       <span  ng-click="cardSelect(card)" ng-repeat="card in players.S | filter:{suit:'S'}  ">
+       <span ng-click="cardSelect(card)" ng-repeat="card in players.S">
             <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-       </span>
-       <span ng-click="cardSelect(card)" ng-repeat="card in players.S | filter:{suit:'H'} ">
-            <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-       </span>
-       <span ng-click="cardSelect(card)" ng-repeat="card in players.S | filter:{suit:'C'} ">
-            <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-        </span>
-        <span ng-click="cardSelect(card)" ng-repeat="card in players.S | filter:{suit:'D'} ">
-            <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-        </span>
+          </span>
       </div>
-      <div class="col-lg-4">X</div>
+      <div class="col-lg-4"></div>
     </div>
   </div>
     <button ng-click="reset()">Reset Game</button>
