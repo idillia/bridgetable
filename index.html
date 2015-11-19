@@ -17,20 +17,12 @@
   <body ng-controller="DemoCtrl">
     <div class="container-fluid">
 
+      <!-- Only modified North as an example to fix Z-Index -->
       <div id="north" class="row">
         <div class="col-lg-4"></div>
         <div class="handContainer col-lg-4">
-          <span ng-click="cardSelect(card)" ng-repeat="card in players.N | filter:{suit:'S'}  ">
+          <span ng-click="cardSelect(card)" ng-repeat="card in players.N">
             <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-          </span>
-         <span ng-click="cardSelect(card)" ng-repeat="card in players.N | filter:{suit:'H'}  ">
-              <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-         </span>
-         <span ng-click="cardSelect(card)" ng-repeat="card in players.N | filter:{suit:'C'} ">
-              <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
-          </span>
-          <span ng-click="cardSelect(card)" ng-repeat="card in players.N | filter:{suit:'D'} ">
-              <playing-card suit="{{card.suit}}" rank="{{card.rank}}" />
           </span>
         </div>
         <div class="col-lg-4"></div> 
